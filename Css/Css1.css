@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ }
+.friend {
+  border: 2px solid red;
+  border-color: #4CAF50;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 600px;
+  width: 400px;
+  margin: 0 auto;
+  transition: width 0.5s;
+  
+ 
+  }
+ .scrollbar{
+  height: 490px;
+  max-height: 600px;
+  overflow-y: auto;
+ } 
+ button {
+          background-color: #ffffff;
+          color: white;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          height: 60px;
+         transition: width 0.5s;
+  }
+   button:hover {
+          opacity: 90%;
+          width: 95%;
+        }
+ .text {
+          padding-left: 10px;
+          text-align: justify;
+          color: black;
+          margin: 15px 0 10px 0;
+          font-weight: bold;
+        }
+ #hr{
+   display: block;
+    height: 1px;
+    border: 0;
+    border-top: 0.1px solid #ccc;
+    padding: 0;
+ } 
+ #backcolor{
+  background-color: green;
+ } 
+ 

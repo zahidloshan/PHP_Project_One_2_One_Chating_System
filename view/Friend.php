@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Profile</title>
-         <link rel="stylesheet" type="text/css" href="../Css/Css1.css">
-    </head>
-    <body>
 
 
-    
-    <?php
+	<?php
 
     include('../control/DataBase.php');
     session_start();
@@ -25,14 +17,9 @@
             $conobj=$connection->OpenCon();
 
             $userQuery=$connection->CheckFrinedlist($conobj,$userid);
-            echo "<div class=".'friend'.">";
-            echo "<div id=".'backcolor'.">";
-            echo "<h1 align=".'left'." >Profile</h1> <hr>"; 
-            echo "</div>";
-            echo "<div class=".'scrollbar'.">";
+
             if($userQuery->num_rows > 0) {
              while($user = $userQuery->fetch_assoc()) { 
-              
               echo "<div align=".'center'." class=".'container'.">";
 
               echo "<button id =".$user['frined']." onclick=myFunction(this.id)>";
@@ -41,16 +28,13 @@
              
               echo "<p class=".'text'." align=".'right'.">".$user['friendname']."</p>";
               echo  "</button>";
-              echo "<hr id=".'hr'.">";
-              echo "</div>";
+              echo "</di>";
+            
              
             }
 
             
         } 
-
-        echo "</div>";
-        echo "</div>";
     ?>
  
 <p id="dem"></p>
@@ -65,9 +49,4 @@
             }   
 
 </script>
- 
-
-      
-    </body>
-</html>
 
