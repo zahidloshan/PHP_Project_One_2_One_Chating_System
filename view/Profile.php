@@ -20,14 +20,23 @@
 
 
     $userid = $_SESSION['user'];
-    $output="";
             $connection = new DataBase();
             $conobj=$connection->OpenCon();
 
             $userQuery=$connection->CheckFrinedlist($conobj,$userid);
             echo "<div class=".'friend'.">";
             echo "<div id=".'backcolor'.">";
-            echo "<h1 align=".'left'." >Profile</h1> <hr>"; 
+            echo "<table>";
+            echo "<tr>";
+            echo "<th>";
+            echo "<h1 id=".'chat'." >Chat</h1>"; 
+            echo "</th>";
+            echo "<th>";
+            echo "<input type=".'text'." placeholder=".'Search..'." class=".'search'.">";
+            echo "</th>";
+            echo "</tr>";
+            echo "</table>";
+            echo "<hr>";
             echo "</div>";
             echo "<div class=".'scrollbar'.">";
             if($userQuery->num_rows > 0) {
@@ -37,7 +46,7 @@
 
               echo "<button id =".$user['frined']." onclick=myFunction(this.id)>";
 
-              echo "<img align=".'left'."  src=".'https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1_copy.jpg'." alt=".'https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1_copy.jpg'." width=".'40'." height=".'40'.">";
+              echo '<img align="left" class="img" src="../uploads/'.$user['frined'].'.png" alt='.$user['frined'].' width="40" height="40">';
              
               echo "<p class=".'text'." align=".'right'.">".$user['friendname']."</p>";
               echo  "</button>";

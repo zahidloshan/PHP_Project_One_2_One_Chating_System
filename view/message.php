@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Message</title>
+  <link rel="stylesheet" type="text/css" href="../Css/Css1.css">
 </head>
 <body>
 
 
   
-  <p id="p2"></p>
+  
 
 
     <script>
@@ -41,12 +42,19 @@
     
 
   </script>
-
+  <div class="friend" >
+  <div class="scrollbar" >
+  
+  
   <p id="p1"></p>
+  <p id="p2"></p>
+  </div>
   <h1>Message</h1>
   <label for="mess">message:</label>
   <input type="text" id="mess" name="mess">
   <input type="submit" id="buttonsend" name="Send" value="Send" onclick="submit()">
+  
+  </div>
   <?php 
   session_start();
   $_SESSION['user'];
@@ -85,6 +93,7 @@ function loadXMLDoc() {
 }
 setInterval (function(){
   loadXMLDoc();
+
 },100);
 
 </script>
